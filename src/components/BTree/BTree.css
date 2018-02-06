@@ -1,0 +1,19 @@
+.BTree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .BTree .tree-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 20px; }
+    .BTree .tree-wrapper div {
+      display: grid; }
+      .BTree .tree-wrapper div .BNode {
+        justify-self: center; }
+    .BTree .tree-wrapper .level-one {
+      grid-template-columns: 1fr;
+      grid-gap: 20px; }
+    .BTree .tree-wrapper .level-two {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 20px; }

@@ -1,0 +1,21 @@
+@import '../../utilities/palette'
+
+.BTree
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  .tree-wrapper
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    grid-gap: 20px
+    div
+      display: grid
+      .BNode
+        justify-self: center
+    .level-one
+      grid-template-columns: 1fr
+      grid-gap: 20px
+    .level-two
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px
