@@ -6,7 +6,11 @@ class BTree extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      level: 2
+      level: 2,
+      nodes: [
+        [ [1] ],
+        [ [0], [2] ]
+      ]
     }
     this.insertValue = this.insertValue.bind(this);
   }
@@ -23,7 +27,7 @@ class BTree extends Component {
         tree = (
           <div className="tree-wrapper">
             <div className="level-one">
-              <BNode />
+              <BNode number={this.state.nodes[0][0]}/>
             </div>
           </div>
         )
@@ -32,11 +36,11 @@ class BTree extends Component {
         tree = (
           <div className="tree-wrapper">
             <div className="level-one">
-              <BNode number={4}/>
+              <BNode number={this.state.nodes[0][0]}/>
             </div>
             <div className="level-two">
-              <BNode />
-              <BNode />
+              <BNode number={this.state.nodes[1][0]}/>
+              <BNode number={this.state.nodes[1][1]}/>
             </div>
           </div>
         )

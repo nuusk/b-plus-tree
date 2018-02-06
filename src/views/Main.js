@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 // import BNode from '../components/BNode/BNode';
 import BTree from '../components/BTree/BTree';
+import InsertField from '../components/InsertField/InsertField';
+import Button from '../components/Button/Button';
 
 import './setting.css'
 
@@ -11,6 +13,12 @@ class Main extends Component {
     this.state = {
       nodes: []
     }
+
+    this.insertValue = this.insertValue.bind(this);
+  }
+
+  insertValue(number) {
+
   }
 
   render() {
@@ -29,6 +37,8 @@ class Main extends Component {
 
     return (
       <div className="main-view">
+        <InsertField insertValue={this.insertValue}/>
+        <Button />
         <BTree/>
       </div>
     );
