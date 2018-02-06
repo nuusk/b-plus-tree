@@ -10,7 +10,8 @@ class BNode extends Component {
   render() {
     return (
       <div className="BNode">
-        
+        <div className="node-wrapper">
+        </div>
       </div>
     );
   }
